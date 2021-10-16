@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="funciones.js"></script>
+  <link rel="stylesheet" href="estilos.css"/>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Disfraces</title>
+</head>
+<body>
+<!-- menu profile quick info -->
+<div class="profile clearfix">
+  <div class="profile_pic">
+    <img src="images/AAM_Foto_fondo_blanco.jpg" alt="..." class="img-circle profile_img">
+  </div>
+  <div class="profile_info">
+    <h2>Bienvenido  Armando Acuña Martínez</h2>
+  </div>
+</div>
+<!-- /menu profile quick info -->
+
+
+  <h1>Tienda de Disfraces</h1>
+  <button onclick="formularioDisfraz()">Formulario de Disfraz</button> 
+  <button onclick="formularioClientes()">Formulario de Clientes</button> 
+  <button onclick="formularioMensajes()">Formulario de Mensajes</button>
+  <button onclick="formularioCategoria()">Formulario de Categorías</button>  <br />
+  <div id=divTablaDisfraz visibility: hidden>
+    <br />
+    <button onclick="consultarDisfraces()">Consultar Disfraces</button>
+    <br /><br />
+  <table>
+    <tr>
+      <td>Codigo de Disfraz </td>
+      <td><input type="number" id="idDisfraz" placeholder="Codigo"></input></td>
+    </tr>
+    <tr>
+      <td>Marca</td>
+      <td><input type="text" id="Brand" placeholder="Marca"></input></td>
+    </tr>
+    <tr>
+      <td>Modelo</td>
+      <td><input type="number" id="Model" placeholder="Modelo"></input></td>
+    </tr>
+    <tr>
+      <td>Categoria</td>
+      <td><input type="number" id="Category" placeholder="Categoria"></input></td>
+    </tr>
+    <tr>
+      <td>Nombre</td>
+      <td><input type="text" id="NameDisfraz" placeholder="Nombre"></input></td>
+    </tr>
+  </table>
+  <br />
+  <button onclick="ingresarDisfraz()">Ingresar disfraz</button>
+  <button onclick="actualizarDisfraz()">Actualizar</button>
+  <button onclick="eliminarDisfraz()">Eliminar</button>
+  <button onclick="$('#divTablaDisfraz').hide()"> Cancelar</button>
+  <br /><br />
+  <div id="idDivConsultaDisfraz"></div>
+  </div>  
+  <div id=divRegClientes visibility: hidden>
+    <br />
+    <button onclick="consultarClientes()">Consultar Clientes</button>
+    <br /><br />
+    <table>
+      <tr>
+        <td>Id Cliente </td>
+        <td><input type="number" id="idCliente" placeholder="Id"></input></td>
+      </tr>
+      <tr>
+        <td>Nombre</td>
+        <td><input type="text" id="NameCliente" placeholder="Nombre"></input></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="email" id="Email" placeholder="Email"></input></td>
+      </tr>
+      <tr>
+        <td>Edad</td>
+        <td><input type="number" id="Edad" placeholder="Edad"></input></td>
+      </tr>
+    </table>
+    <br />
+    <button onclick="crearCliente()">Crear Cliente</button>
+    <button onclick="actualizarCliente()">Actualizar</button>
+    <button onclick="eliminarCliente()">Eliminar</button>
+    <button onclick="$('#divRegClientes').hide()"> Cancelar</button>
+    <br /><br />
+    <div id="idDivConsultaClientes"></div>
+  </div>
+  
+  <div id=divRegMensajes visibility: hidden>
+    <br />
+    <button onclick="consultarMensajes()">Consultar Mensajes</button>
+    <br /><br />
+  <table>
+    <tr>
+      <td>Id Mensaje </td>
+      <td><input type="number" id="idMessage" placeholder="Id"></input></td>
+    </tr>
+    <tr>
+      <td>Mensaje</td>
+      <td><input type="text" id="MessageText" placeholder="Mensaje"></input></td>
+    </tr>
+  </table>
+  <br />
+  <button onclick="crearMensaje()">Enviar Mensaje</button>
+  <button onclick="actualizarMensaje()">Actualizar</button>
+  <button onclick="eliminarMensaje()">Eliminar</button>
+    <button onclick="$('#divRegMensajes').hide()"> Cancelar</button>
+    <br /><br />
+    <div id="idDivConsultaMensajes"></div>
+    
+  </div>
+
+  <div id=divRegCategoria visibility: hidden>
+    <br />
+    <button onclick="consultarCategoria()">Consultar Categoría</button>
+    <br /><br />
+  <table>
+    <tr>
+      <td>Id </td>
+      <td><input type="number" id="idCategoria" placeholder="Id"></input></td>
+    </tr>
+    <tr>
+      <td>Nombre</td>
+      <td><input type="text" id="nameCategoria" placeholder="Nombre"></input></td>
+    </tr>
+  </table>
+  <br />
+  <button onclick="crearCategoria(id)">Crear Categoría</button>
+  <button onclick="actualizarCategoria(id)">Actualizar</button>
+  <button onclick="eliminarCategoria()">Eliminar</button>
+    <button onclick="$('#divRegCategoria').hide()"> Cancelar</button>
+    <br /><br />
+    <div id="idDivConsultaCategoria"></div>
+    
+  </div>
+
+</body>
+</html>
